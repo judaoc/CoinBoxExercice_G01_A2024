@@ -22,4 +22,8 @@ jobs:
         with:
           name: code-coverage folder
           path: htmlcov/**
+      - name: Run mutation tests
+        run: |
+         mutmut run
+         mutmut html
       - run: echo "🍏 This job's status is ${{ job.status }}."
