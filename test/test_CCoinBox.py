@@ -1,5 +1,5 @@
 import unittest
-from CCoinBox import CCoinBox
+from src.CCoinBox import CCoinBox
 
 class Test_CCoinBox(unittest.TestCase):
 
