@@ -1,6 +1,11 @@
 import unittest
-from src.CCoinBox import CCoinBox
-from src import CCoinBox
+import sys
+import os
+import unittest
+# Ajouter le répertoire src au chemin de recherche de Python
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src')))
+
+from CCoinBox import CCoinBox
 
 class Test_CCoinBox(unittest.TestCase):
 
