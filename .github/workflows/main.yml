@@ -25,5 +25,5 @@ jobs:
       - name: Run mutation tests
         run: |
          mutmut run
-         mutmut browse
+         mutmut results
       - run: echo "🍏 This job's status is ${{ job.status }}."
