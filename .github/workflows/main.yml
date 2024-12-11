@@ -12,7 +12,7 @@ jobs:
       - name: Install dependencies 
         run: pip install -r ./requirements.txt
       - name: Execute all tests
-        run: python -m unittest test.test_CCoinBox
+        run: python -m unittest discover -s ./test
       - name: Execute coverage report
         run: coverage run -m unittest discover -s ./test
       - name: Create HTML report
