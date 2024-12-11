@@ -17,13 +17,14 @@ jobs:
         run: coverage run -m unittest discover -s ./test
       - name: Create HTML report
         run: coverage report && coverage html
+      - name: Run mutation tests
+        run: |
+          mutmut run
+          mutmut results
+          mutmut html
       - name: Upload Archive coverage
         uses: actions/upload-artifact@v4
         with:
           name: code-coverage folder
           path: htmlcov/**
-      - name: Run mutation tests
-        run: |
-         mutmut run
-         mutmut results
       - run: echo "🍏 This job's status is ${{ job.status }}."
